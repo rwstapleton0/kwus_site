@@ -1,3 +1,4 @@
+import React from 'react';
 import Editor from 'react-simple-code-editor';
 import { Container } from "@radix-ui/themes";
 
@@ -20,11 +21,13 @@ function highlightMove(code: string) {
 }
 
 interface MoveEditorProps {
-    code: string,
-    setCode: Function,
-}
+    initCode: string,
+    completeCode: string,
+} // do i need to get this from props, can i just get the correct awnser and use state in here?
 
+// TODO: should give this tabs?
 function MoveEditor(props: MoveEditorProps) {
+    const [code, setCode] = React.useState(props.initCode);
     return (
         <Container
             m="5"
@@ -32,19 +35,20 @@ function MoveEditor(props: MoveEditorProps) {
             size="1"
             style={{ 
                 background: "var(--gray-a2)", 
-                // minHeight: 500,
-                // maxWidth: 740, 
-                borderRadius: 'var(--radius-3)' 
+                minHeight: 500,
+                borderRadius: 'var(--radius-3)',
+                boxShadow: '2px 2px 2px #5c5c5c' 
             }}
         >
             <Editor
-                value={props.code}
-                onValueChange={code => props.setCode(code)}
+                value={code}
+                onValueChange={code => setCode(code)}
                 highlight={highlightMove}
                 padding={10}
                 style={{
                     fontFamily: '"Fira code", "Fira Mono", monospace',
-                    fontSize: 12,
+                    fontSize: 14,
+                    height: 500,
                 }}
             />
             

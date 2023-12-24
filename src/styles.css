@@ -1,42 +1,39 @@
-.token.keyword {
-    color: #93a0e9;
-}
-
-.token.function {
-    color: #ff9c95;
-}
-
-.token.comment {
-    color: #8bd15d;
-}
-
-.logo {
-    width: 80px;
-}
-
-textarea:focus {
-    outline: none;
-}
 
 @import '@radix-ui/colors/black-alpha.css';
 @import '@radix-ui/colors/mauve.css';
 @import '@radix-ui/colors/violet.css';
+
+.token.keyword {
+  color: #93a0e9;
+}
+
+.token.function {
+  color: #ff9c95;
+}
+
+.token.comment {
+  color: #8bd15d;
+}
+
+.logo {
+  width: 80px;
+}
+
+textarea:focus {
+  outline: none;
+}
 
 /* reset */
 button {
   all: unset;
 }
 
-.DropdownMenuContent,
-.DropdownMenuSubContent {
+.DropdownMenuContent{
   min-width: 220px;
   background-color: white;
   border-radius: 6px;
   padding: 5px;
   box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2);
-  animation-duration: 400ms;
-  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
 }
 .DropdownMenuContent[data-side='top'],
 .DropdownMenuSubContent[data-side='top'] {
@@ -55,10 +52,7 @@ button {
   animation-name: slideRightAndFade;
 }
 
-.DropdownMenuItem,
-.DropdownMenuCheckboxItem,
-.DropdownMenuRadioItem,
-.DropdownMenuSubTrigger {
+.DropdownMenuItem {
   font-size: 13px;
   line-height: 1;
   color: var(--violet-11);
@@ -91,103 +85,35 @@ button {
   color: var(--violet-1);
 }
 
-.DropdownMenuLabel {
-  padding-left: 25px;
-  font-size: 12px;
-  line-height: 25px;
-  color: var(--mauve-11);
+/* QuestBox */
+
+.parchment {
+  height: 540px;
 }
 
-.DropdownMenuSeparator {
-  height: 1px;
-  background-color: var(--violet-6);
-  margin: 5px;
-}
-
-.DropdownMenuItemIndicator {
+.questBoxInner {
+  display: flex;
   position: absolute;
-  left: 0;
-  width: 25px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  top:0;
+  padding: 70px;
 }
 
-.DropdownMenuArrow {
-  fill: white;
+.questBoxInner h2 {
+  padding-bottom: 16px;
 }
 
-.IconButton {
-  font-family: inherit;
-  border-radius: 100%;
-  height: 35px;
-  width: 35px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--violet-11);
-  background-color: white;
-  box-shadow: 0 2px 10px var(--black-a7);
-}
-.IconButton:hover {
-  background-color: var(--violet-3);
-}
-.IconButton:focus {
-  box-shadow: 0 0 0 2px black;
+.questBoxInnerText {
+  padding-right: 8px;
+  margin-right: 8px;
+  border-right: 1px solid #1d1d1d;
+  flex: 50%;
 }
 
-.RightSlot {
-  margin-left: auto;
-  padding-left: 20px;
-  color: var(--mauve-11);
-}
-[data-highlighted] > .RightSlot {
-  color: white;
-}
-[data-disabled] .RightSlot {
-  color: var(--mauve-8);
+.questBoxInnerImage {
+  flex: 50%;
 }
 
-@keyframes slideUpAndFade {
-  from {
-    opacity: 0;
-    transform: translateY(2px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideRightAndFade {
-  from {
-    opacity: 0;
-    transform: translateX(-2px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideDownAndFade {
-  from {
-    opacity: 0;
-    transform: translateY(-2px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideLeftAndFade {
-  from {
-    opacity: 0;
-    transform: translateX(2px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.questImage {
+  height: 320px;
+  margin: 0 auto;
 }

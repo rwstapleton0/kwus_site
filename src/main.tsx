@@ -15,7 +15,9 @@ import {
 } from "@mysten/dapp-kit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Theme } from "@radix-ui/themes";
-import App from "./App.tsx";
+import App from "./pages/App.tsx";
+import Quests from "./pages/Quests.tsx";
+import Quest from "./pages/Quest.tsx";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+  },
+  {
+    path: "/quests",
+    element: <Quests />
+  },
+  {
+    path: "/quest/:questId/chapter/:chapterId",
+    element: <Quest />
   },
 ]);
 
