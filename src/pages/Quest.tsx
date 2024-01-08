@@ -32,7 +32,7 @@ function Quest() {
     let qId = parseInt(questId);
     let cId = parseInt(chapterId);
     let quest = questList[qId];
-    let chapter = quest.chapter[cId];
+    // let chapter = quest.chapter[cId];
 
     let route = `/quest/${qId}/chapter/`;
 

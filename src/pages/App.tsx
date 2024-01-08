@@ -1,7 +1,7 @@
 import { Container, Box, Text, Flex, Heading, Button } from "@radix-ui/themes";
 // import { WalletStatus } from "./WalletStatus";
 import '../styles.css'
-import KWUSHeader from '../components/KWUSHeader';
+// import KWUSHeader from '../components/KWUSHeader';
 import hero from '../assets/hero.png';
 import QuestBox from "../components/QuestBox";
 import questList from "../quests";
