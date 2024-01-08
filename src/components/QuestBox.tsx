@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function QuestBox(props: any) {
     return (
         <Container style={{ position: "relative" }}>
-            <Link to={`/quest/${props.key}/chapter/1`}> {/* should jump to chapter? */}
+            <Link to={`/quest/${props.index}/chapter/1`}> {/* should jump to chapter? */}
                 <img src={parchment} style={{ width: "550px"}} alt="parchment" />
                 <Container px="6" py="9" style={{ position: "absolute", color: "#1d1d1d", left: "0", top: "0" }}>
                     <Flex>

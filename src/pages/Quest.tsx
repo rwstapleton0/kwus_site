@@ -11,9 +11,18 @@ type QuestParams = {
     chapterId: string,
 }
 
-function DisplayView() {
+type DisplayViewProps = {
+    completeCode: string | undefined,
+}
+
+function DisplayView(props: DisplayViewProps) {
     return (
-        <CodeEditor initCode="some code" completeCode="other code smile :*)"/>
+        <>
+            {
+                props.completeCode != undefined ? <CodeEditor initCode="some code" completeCode="other code smile :*)"/> :
+                true ? <></> : <></>
+            }
+        </>
     )
 }
 
@@ -72,7 +81,7 @@ function Quest() {
 
                 </Container>
                 <Container style={{ flex: "50%" }}>
-                    <DisplayView/>
+                    <DisplayView completeCode="" />
                 </Container>
             </Flex>
         </Container>

@@ -5,7 +5,7 @@ import QuestBox from "../components/QuestBox";
 
 function Quests() {
     const questItems = questList.map((quest, i) =>
-        <QuestBox item={quest} key={i} />
+        <QuestBox item={quest} key={i} index={i}/>
     );
     return (
         <Container
