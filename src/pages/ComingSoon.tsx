@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Container, Flex, Heading, Button, TextField, Checkbox, Text } from "@radix-ui/themes";
 import logo from '../assets/logo.png'
 import "../styles.css"
-import { Route } from "react-router-dom";
 import { sendEmailAddress } from "../data"
 
 const validateEmail = (email: string) => {

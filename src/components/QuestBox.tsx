@@ -1,6 +1,6 @@
 
 import parchment from '../assets/patchment.png'
-import { Box, Container, Flex, Heading } from '@radix-ui/themes';
+import { Container, Flex, Heading } from '@radix-ui/themes';
 import { Link } from 'react-router-dom';
 
 function QuestBox(props: any) {
