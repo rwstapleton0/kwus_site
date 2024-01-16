@@ -5,7 +5,7 @@ import QuestBox from "../components/QuestBox";
 
 function Quests() {
     const questItems = questList.map((quest, i) =>
-        <QuestBox item={quest} key={i} index={i}/>
+        <QuestBox key={i} item={quest} index={i}/>
     );
     return (
         <Container
@@ -16,7 +16,7 @@ function Quests() {
             <Container py="4">
                 <Heading size="8"> Quests</Heading>
             </Container>
-            <Flex wrap="wrap" gap="6" justify="between">
+            <Flex wrap="wrap" gap="4" justify="between">
                 {questItems}
             </Flex>
         </Container>

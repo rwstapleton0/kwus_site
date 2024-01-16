@@ -18,7 +18,7 @@ function App() {
                 <Container
                     style={{
                         position: "absolute",
-                        top: "40px",
+                        top: "120px",
                         left: "45%"
                     }}
                 >
@@ -27,13 +27,22 @@ function App() {
                             width: "240px",
                         }} alt="scene" />
                         <Container>
-                            <Heading style={{ color: "#000", paddingBottom: "8px" }}>New here? Want to see<br />what its all about.</Heading>
+                            <Heading style={{ 
+                                color: "#000", 
+                                marginBottom: "14px",
+                                padding: "8px",
+                                background: "#fff",
+                                border: "2px solid #ffbb00"
+                            }}>New here? Want to see<br />what its all about.</Heading>
                             <Link  to={`/quest/0/chapter/1`}>
-                                <Button variant="solid" onClick={() => {}} size={"4"} color="bronze">JOIN A QUEST</Button>
+                                <Button 
+                                    variant="solid" 
+                                    onClick={() => {}}
+                                    size={"4"}
+                                    color="bronze"
+                                >JOIN A QUEST</Button>
                             </Link>
-                            
                         </Container>
-
                     </Flex>
                 </Container>
             </div>
@@ -41,7 +50,7 @@ function App() {
                 mx="2"
                 size="4"
             >
-                {/* <KWUSHeader/> */}
+                <Container m={"auto"} ><Button size={"4"}>All Quests</Button></Container>
                 <Container my="8">
                     <Flex align="center">
                         <Box style={{ width: "540px" }}>

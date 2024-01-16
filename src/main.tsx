@@ -15,9 +15,13 @@ import {
 } from "@mysten/dapp-kit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Theme } from "@radix-ui/themes";
-import App from "./pages/App.tsx";
-import Quests from "./pages/Quests.tsx";
-import Quest from "./pages/Quest.tsx";
+import './theme-config.css';
+
+// import App from "./pages/App.tsx";
+// import Quests from "./pages/Quests.tsx";
+// import Quest from "./pages/Quest.tsx";
+
+import { ComingSoon } from "./pages/ComingSoon.tsx"
 
 const queryClient = new QueryClient();
 
@@ -31,16 +35,17 @@ const { networkConfig } = createNetworkConfig({
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <ComingSoon />,
+    // element: <App/>,
   },
-  {
-    path: "/quests",
-    element: <Quests />
-  },
-  {
-    path: "/quest/:questId/chapter/:chapterId",
-    element: <Quest />
-  },
+  // {
+  //   path: "/quests",
+  //   element: <Quests />
+  // },
+  // {
+  //   path: "/quest/:questId/chapter/:chapterId",
+  //   element: <Quest />
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

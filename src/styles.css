@@ -117,3 +117,9 @@ button {
   height: 320px;
   margin: 0 auto;
 }
+
+.epic {
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
